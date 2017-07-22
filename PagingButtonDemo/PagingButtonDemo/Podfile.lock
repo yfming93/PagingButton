@@ -1,14 +1,17 @@
 PODS:
-  - SDWebImage (3.8.2):
-    - SDWebImage/Core (= 3.8.2)
-  - SDWebImage/Core (3.8.2)
+  - PagingButton (0.1.2):
+    - SDWebImage
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
 
 DEPENDENCIES:
-  - SDWebImage (~> 3.8.0)
+  - PagingButton
 
 SPEC CHECKSUMS:
-  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  PagingButton: c7190444dc17a6df284614c148f2a108e8510f2a
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: 91164ac4434a924a6a7eceaf24da793becb2976a
+PODFILE CHECKSUM: a2f8f964204bcf95fadab98e18aff1097813f375
 
 COCOAPODS: 1.2.1

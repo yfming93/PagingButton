@@ -5,6 +5,8 @@
 //  Created by Mingo on 2017/7/20.
 //  Copyright © 2017年 袁凤鸣. All rights reserved.
 //
+//  联系邮箱： yfmingo@163.com
+//  个人主页： https://www.yfmingo.cn
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -25,24 +27,23 @@
 @end
 
 typedef NS_ENUM(NSInteger, PageControlStyle) {
-    PageControlStyleHiden = 1,  //隐藏
-    PageControlStyleLongImage = 2, //长图片
-    PageControlStyleGrayDot = 3   //小灰点
+    PageControlStyleHiden = 1,      //隐藏
+    PageControlStyleLongImage = 2,  //长图片
+    PageControlStyleGrayDot = 3     //小灰点
     
 };
 
 @interface PagingButtonView : UIView<UIScrollViewDelegate>
 
-@property (nonatomic, assign) id <PagingButtonViewDelegate>delegate;
+@property (nonatomic, assign) id <PagingButtonViewDelegate> delegate;
 
-@property (nonatomic, strong) UIPageControl *pageControl; //分页标识
 @property (nonatomic, assign) PageControlStyle pageControlStyle; //pageControlStyle样式
-@property (nonatomic, strong) UIColor *pageControlCurrentPageColor; //当前page颜色
-@property (nonatomic, strong) UIColor *pageControlOtherPageColor;  //其他page颜色
+@property (nonatomic, strong) UIColor   *pageControlCurrentPageColor; //当前page颜色
+@property (nonatomic, strong) UIColor   *pageControlOtherPageColor;  //其他page颜色
 @property (nonatomic, assign) NSInteger pagingRow; //行数
 @property (nonatomic, assign) NSInteger pagingColumn; //列数
-@property (nonatomic, strong) UILabel *mainTitleLab; //标题 【不赋值默认无标题】
-@property (nonatomic, assign) BOOL hasClickAnimation; //是否有点击动画【默认开启】
+@property (nonatomic, strong) UILabel   *mainTitleLab; //标题 【不赋值默认无标题】
+@property (nonatomic, assign) BOOL      hasClickAnimation; //是否有点击动画【默认开启】
 
 /**
  创建 PagingButtonView 【请在设置好相关属性后 最后一步调用此方法】

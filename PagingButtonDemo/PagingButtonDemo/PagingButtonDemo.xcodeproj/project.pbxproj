@@ -16,8 +16,6 @@
 		DAAB94671F227669000164CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAB94651F227669000164CF /* LaunchScreen.storyboard */; };
 		DAAB94721F22766A000164CF /* PagingButtonDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAB94711F22766A000164CF /* PagingButtonDemoTests.m */; };
 		DAAB947D1F22766A000164CF /* PagingButtonDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAB947C1F22766A000164CF /* PagingButtonDemoUITests.m */; };
-		DAAB948E1F2276E2000164CF /* PagingButtonView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DAAB948B1F2276E2000164CF /* PagingButtonView.bundle */; };
-		DAAB948F1F2276E2000164CF /* PagingButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAB948D1F2276E2000164CF /* PagingButtonView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,9 +55,6 @@
 		DAAB94781F22766A000164CF /* PagingButtonDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PagingButtonDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAB947C1F22766A000164CF /* PagingButtonDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PagingButtonDemoUITests.m; sourceTree = "<group>"; };
 		DAAB947E1F22766A000164CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DAAB948B1F2276E2000164CF /* PagingButtonView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PagingButtonView.bundle; sourceTree = "<group>"; };
-		DAAB948C1F2276E2000164CF /* PagingButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagingButtonView.h; sourceTree = "<group>"; };
-		DAAB948D1F2276E2000164CF /* PagingButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagingButtonView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +125,6 @@
 		DAAB94561F227669000164CF /* PagingButtonDemo */ = {
 			isa = PBXGroup;
 			children = (
-				DAAB948A1F2276E2000164CF /* PagingButton */,
 				DAAB945A1F227669000164CF /* AppDelegate.h */,
 				DAAB945B1F227669000164CF /* AppDelegate.m */,
 				DAAB945D1F227669000164CF /* ViewController.h */,
@@ -168,16 +162,6 @@
 				DAAB947E1F22766A000164CF /* Info.plist */,
 			);
 			path = PagingButtonDemoUITests;
-			sourceTree = "<group>";
-		};
-		DAAB948A1F2276E2000164CF /* PagingButton */ = {
-			isa = PBXGroup;
-			children = (
-				DAAB948B1F2276E2000164CF /* PagingButtonView.bundle */,
-				DAAB948C1F2276E2000164CF /* PagingButtonView.h */,
-				DAAB948D1F2276E2000164CF /* PagingButtonView.m */,
-			);
-			path = PagingButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,7 +276,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAAB948E1F2276E2000164CF /* PagingButtonView.bundle in Resources */,
 				DAAB94671F227669000164CF /* LaunchScreen.storyboard in Resources */,
 				DAAB94641F227669000164CF /* Assets.xcassets in Resources */,
 				DAAB94621F227669000164CF /* Main.storyboard in Resources */,
@@ -370,7 +353,6 @@
 			files = (
 				DAAB945F1F227669000164CF /* ViewController.m in Sources */,
 				DAAB945C1F227669000164CF /* AppDelegate.m in Sources */,
-				DAAB948F1F2276E2000164CF /* PagingButtonView.m in Sources */,
 				DAAB94591F227669000164CF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,6 +595,7 @@
 				DAAB94831F22766A000164CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAAB94841F22766A000164CF /* Build configuration list for PBXNativeTarget "PagingButtonDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -621,6 +604,7 @@
 				DAAB94861F22766A000164CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAAB94871F22766A000164CF /* Build configuration list for PBXNativeTarget "PagingButtonDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -629,6 +613,7 @@
 				DAAB94891F22766A000164CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
