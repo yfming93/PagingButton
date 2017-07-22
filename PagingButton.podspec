@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "PagingButton"
-  s.version      = "0.0.2"
-  s.summary      = "这是一个左右分页按钮的集合视图控件"
+  s.version      = "0.1.2"
+  s.summary      = "这是一个左右分页按钮的集合视图控件。用于快速编写集合视图上横向分页式多按钮点击事件！"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-  "这是一个左右分页按钮的集合视图控件。用于快速编写出集合视图上分页多按钮点击事件！"
+  "这是一个左右分页按钮的集合视图控件。用于快速编写集合视图上横向分页式多按钮点击事件！"
                    DESC
 
   s.homepage     = "https://github.com/yfming93/PagingButton"
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => 'https://github.com/yfming93/PagingButton.git', :tag => s.version.to_s }
+  s.source       = { :git => 'https://github.com/yfming93/PagingButton.git', :tag => s.version }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -132,6 +132,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency 'SDWebImage', '~> 3.8.0'
+  s.dependency 'SDWebImage'
 
 end
