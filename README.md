@@ -69,9 +69,9 @@
 
 
 ## 三、联系：
-联系邮箱：yfmingo@163.com
-联系网站：[www.yfmingo.cn](www.yfmingo.cn)
-项目地址：[https://github.com/yfming93/PagingButton](https://github.com/yfming93/PagingButton)
+- 联系邮箱：yfmingo@163.com
+- 联系网站：[www.yfmingo.cn](www.yfmingo.cn)
+- 项目地址：[https://github.com/yfming93/PagingButton](https://github.com/yfming93/PagingButton)
 
 ## 四、后记：
 - 欢迎大家使用哈。如果大家发现问题和有好的建议欢迎随时  `Issues` 和 `Pull requests`
