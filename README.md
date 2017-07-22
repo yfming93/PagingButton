@@ -3,12 +3,13 @@
 ## 一、介绍：
 #### 这是一个左右分页按钮的集合视图控件。用于快速编写出集合视图上分页多按钮点击事件！
 
-效果图：
+效果图：<br>
+
 ![](https://ws1.sinaimg.cn/mw690/cb81ffe8gy1fht8em8hldg20ag0lbdqf.gif)
 
 ## 二、 使用：
 
-    pod 'PagingButton'
+> **pod 'PagingButton'**
 
 **然后导入头文件，添加代理：**
 
