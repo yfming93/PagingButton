@@ -5,6 +5,9 @@
 //  Created by Mingo on 2017/7/20.
 //  Copyright © 2017年 袁凤鸣. All rights reserved.
 //
+//  联系邮箱： yfmingo@163.com
+//  个人主页： https://www.yfmingo.cn
+//  项目地址： https://github.com/yfming93/PagingButton
 
 
 #import "PagingButtonView.h"
@@ -55,10 +58,10 @@ const
 @interface PagingButtonView ()
 
 @property (nonatomic, strong) UIScrollView *bgScrollerView; //背景ScrollerView
+@property (nonatomic, strong) UIPageControl *pageControl; //分页标识
 
 @end
 
-#define RGBCOLOR(RED,GREEN,BLUE) [UIColor colorWithRed:RED/255.0 green:GREEN/255.0 blue:BLUE/255.0 alpha:1.0]
 
 @implementation PagingButtonView
 
@@ -203,7 +206,6 @@ const
     NSInteger page = scrollView.contentOffset.x/self.frame.size.width;
     _pageControl.currentPage = page;
 }
-
 
 - (void)actionButtonClick:(UIButton *)btn{
     
