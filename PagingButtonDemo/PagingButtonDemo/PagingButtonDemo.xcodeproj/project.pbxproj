@@ -1,0 +1,636 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3AE2503DFF618C417E83856E /* libPods-PagingButtonDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A8CFD5094924090C334883A /* libPods-PagingButtonDemo.a */; };
+		DAAB94591F227669000164CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAB94581F227669000164CF /* main.m */; };
+		DAAB945C1F227669000164CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAB945B1F227669000164CF /* AppDelegate.m */; };
+		DAAB945F1F227669000164CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAB945E1F227669000164CF /* ViewController.m */; };
+		DAAB94621F227669000164CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAB94601F227669000164CF /* Main.storyboard */; };
+		DAAB94641F227669000164CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAAB94631F227669000164CF /* Assets.xcassets */; };
+		DAAB94671F227669000164CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAB94651F227669000164CF /* LaunchScreen.storyboard */; };
+		DAAB94721F22766A000164CF /* PagingButtonDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAB94711F22766A000164CF /* PagingButtonDemoTests.m */; };
+		DAAB947D1F22766A000164CF /* PagingButtonDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAB947C1F22766A000164CF /* PagingButtonDemoUITests.m */; };
+		DAAB948E1F2276E2000164CF /* PagingButtonView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DAAB948B1F2276E2000164CF /* PagingButtonView.bundle */; };
+		DAAB948F1F2276E2000164CF /* PagingButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAB948D1F2276E2000164CF /* PagingButtonView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DAAB946E1F22766A000164CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAAB944C1F227669000164CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAAB94531F227669000164CF;
+			remoteInfo = PagingButtonDemo;
+		};
+		DAAB94791F22766A000164CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAAB944C1F227669000164CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAAB94531F227669000164CF;
+			remoteInfo = PagingButtonDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4DC288E4944A60CCB9B8677D /* Pods-PagingButtonDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PagingButtonDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PagingButtonDemo/Pods-PagingButtonDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		7A8CFD5094924090C334883A /* libPods-PagingButtonDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PagingButtonDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DCBBAC7D89B85DAF0E8969D /* Pods-PagingButtonDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PagingButtonDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PagingButtonDemo/Pods-PagingButtonDemo.release.xcconfig"; sourceTree = "<group>"; };
+		DAAB94541F227669000164CF /* PagingButtonDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PagingButtonDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAAB94581F227669000164CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DAAB945A1F227669000164CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DAAB945B1F227669000164CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DAAB945D1F227669000164CF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DAAB945E1F227669000164CF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DAAB94611F227669000164CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DAAB94631F227669000164CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DAAB94661F227669000164CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DAAB94681F227669000164CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAAB946D1F22766A000164CF /* PagingButtonDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PagingButtonDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAAB94711F22766A000164CF /* PagingButtonDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PagingButtonDemoTests.m; sourceTree = "<group>"; };
+		DAAB94731F22766A000164CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAAB94781F22766A000164CF /* PagingButtonDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PagingButtonDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAAB947C1F22766A000164CF /* PagingButtonDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PagingButtonDemoUITests.m; sourceTree = "<group>"; };
+		DAAB947E1F22766A000164CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAAB948B1F2276E2000164CF /* PagingButtonView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PagingButtonView.bundle; sourceTree = "<group>"; };
+		DAAB948C1F2276E2000164CF /* PagingButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagingButtonView.h; sourceTree = "<group>"; };
+		DAAB948D1F2276E2000164CF /* PagingButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagingButtonView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAAB94511F227669000164CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AE2503DFF618C417E83856E /* libPods-PagingButtonDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAAB946A1F227669000164CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAAB94751F22766A000164CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2ED139ADAB5C959FE9845707 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4DC288E4944A60CCB9B8677D /* Pods-PagingButtonDemo.debug.xcconfig */,
+				8DCBBAC7D89B85DAF0E8969D /* Pods-PagingButtonDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8002A2A78903E6F9C85C530A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A8CFD5094924090C334883A /* libPods-PagingButtonDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAAB944B1F227669000164CF = {
+			isa = PBXGroup;
+			children = (
+				DAAB94561F227669000164CF /* PagingButtonDemo */,
+				DAAB94701F22766A000164CF /* PagingButtonDemoTests */,
+				DAAB947B1F22766A000164CF /* PagingButtonDemoUITests */,
+				DAAB94551F227669000164CF /* Products */,
+				2ED139ADAB5C959FE9845707 /* Pods */,
+				8002A2A78903E6F9C85C530A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DAAB94551F227669000164CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAAB94541F227669000164CF /* PagingButtonDemo.app */,
+				DAAB946D1F22766A000164CF /* PagingButtonDemoTests.xctest */,
+				DAAB94781F22766A000164CF /* PagingButtonDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAAB94561F227669000164CF /* PagingButtonDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DAAB948A1F2276E2000164CF /* PagingButton */,
+				DAAB945A1F227669000164CF /* AppDelegate.h */,
+				DAAB945B1F227669000164CF /* AppDelegate.m */,
+				DAAB945D1F227669000164CF /* ViewController.h */,
+				DAAB945E1F227669000164CF /* ViewController.m */,
+				DAAB94601F227669000164CF /* Main.storyboard */,
+				DAAB94631F227669000164CF /* Assets.xcassets */,
+				DAAB94651F227669000164CF /* LaunchScreen.storyboard */,
+				DAAB94681F227669000164CF /* Info.plist */,
+				DAAB94571F227669000164CF /* Supporting Files */,
+			);
+			path = PagingButtonDemo;
+			sourceTree = "<group>";
+		};
+		DAAB94571F227669000164CF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DAAB94581F227669000164CF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DAAB94701F22766A000164CF /* PagingButtonDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				DAAB94711F22766A000164CF /* PagingButtonDemoTests.m */,
+				DAAB94731F22766A000164CF /* Info.plist */,
+			);
+			path = PagingButtonDemoTests;
+			sourceTree = "<group>";
+		};
+		DAAB947B1F22766A000164CF /* PagingButtonDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DAAB947C1F22766A000164CF /* PagingButtonDemoUITests.m */,
+				DAAB947E1F22766A000164CF /* Info.plist */,
+			);
+			path = PagingButtonDemoUITests;
+			sourceTree = "<group>";
+		};
+		DAAB948A1F2276E2000164CF /* PagingButton */ = {
+			isa = PBXGroup;
+			children = (
+				DAAB948B1F2276E2000164CF /* PagingButtonView.bundle */,
+				DAAB948C1F2276E2000164CF /* PagingButtonView.h */,
+				DAAB948D1F2276E2000164CF /* PagingButtonView.m */,
+			);
+			path = PagingButton;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAAB94531F227669000164CF /* PagingButtonDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAAB94811F22766A000164CF /* Build configuration list for PBXNativeTarget "PagingButtonDemo" */;
+			buildPhases = (
+				AF8D9D8A942818C9A4E1C0AB /* [CP] Check Pods Manifest.lock */,
+				DAAB94501F227669000164CF /* Sources */,
+				DAAB94511F227669000164CF /* Frameworks */,
+				DAAB94521F227669000164CF /* Resources */,
+				74A6564DE2419BC56A620F11 /* [CP] Embed Pods Frameworks */,
+				B2A537DFECB72C2D8ABF7C08 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PagingButtonDemo;
+			productName = PagingButtonDemo;
+			productReference = DAAB94541F227669000164CF /* PagingButtonDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DAAB946C1F227669000164CF /* PagingButtonDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAAB94841F22766A000164CF /* Build configuration list for PBXNativeTarget "PagingButtonDemoTests" */;
+			buildPhases = (
+				DAAB94691F227669000164CF /* Sources */,
+				DAAB946A1F227669000164CF /* Frameworks */,
+				DAAB946B1F227669000164CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAAB946F1F22766A000164CF /* PBXTargetDependency */,
+			);
+			name = PagingButtonDemoTests;
+			productName = PagingButtonDemoTests;
+			productReference = DAAB946D1F22766A000164CF /* PagingButtonDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DAAB94771F22766A000164CF /* PagingButtonDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAAB94871F22766A000164CF /* Build configuration list for PBXNativeTarget "PagingButtonDemoUITests" */;
+			buildPhases = (
+				DAAB94741F22766A000164CF /* Sources */,
+				DAAB94751F22766A000164CF /* Frameworks */,
+				DAAB94761F22766A000164CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAAB947A1F22766A000164CF /* PBXTargetDependency */,
+			);
+			name = PagingButtonDemoUITests;
+			productName = PagingButtonDemoUITests;
+			productReference = DAAB94781F22766A000164CF /* PagingButtonDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAAB944C1F227669000164CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "袁凤鸣";
+				TargetAttributes = {
+					DAAB94531F227669000164CF = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = SV98J7C3Y8;
+						ProvisioningStyle = Automatic;
+					};
+					DAAB946C1F227669000164CF = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = SV98J7C3Y8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DAAB94531F227669000164CF;
+					};
+					DAAB94771F22766A000164CF = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = SV98J7C3Y8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DAAB94531F227669000164CF;
+					};
+				};
+			};
+			buildConfigurationList = DAAB944F1F227669000164CF /* Build configuration list for PBXProject "PagingButtonDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DAAB944B1F227669000164CF;
+			productRefGroup = DAAB94551F227669000164CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAAB94531F227669000164CF /* PagingButtonDemo */,
+				DAAB946C1F227669000164CF /* PagingButtonDemoTests */,
+				DAAB94771F22766A000164CF /* PagingButtonDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAAB94521F227669000164CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAAB948E1F2276E2000164CF /* PagingButtonView.bundle in Resources */,
+				DAAB94671F227669000164CF /* LaunchScreen.storyboard in Resources */,
+				DAAB94641F227669000164CF /* Assets.xcassets in Resources */,
+				DAAB94621F227669000164CF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAAB946B1F227669000164CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAAB94761F22766A000164CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74A6564DE2419BC56A620F11 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PagingButtonDemo/Pods-PagingButtonDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF8D9D8A942818C9A4E1C0AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B2A537DFECB72C2D8ABF7C08 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PagingButtonDemo/Pods-PagingButtonDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAAB94501F227669000164CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAAB945F1F227669000164CF /* ViewController.m in Sources */,
+				DAAB945C1F227669000164CF /* AppDelegate.m in Sources */,
+				DAAB948F1F2276E2000164CF /* PagingButtonView.m in Sources */,
+				DAAB94591F227669000164CF /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAAB94691F227669000164CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAAB94721F22766A000164CF /* PagingButtonDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAAB94741F22766A000164CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAAB947D1F22766A000164CF /* PagingButtonDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAAB946F1F22766A000164CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAAB94531F227669000164CF /* PagingButtonDemo */;
+			targetProxy = DAAB946E1F22766A000164CF /* PBXContainerItemProxy */;
+		};
+		DAAB947A1F22766A000164CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAAB94531F227669000164CF /* PagingButtonDemo */;
+			targetProxy = DAAB94791F22766A000164CF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DAAB94601F227669000164CF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAAB94611F227669000164CF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DAAB94651F227669000164CF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAAB94661F227669000164CF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DAAB947F1F22766A000164CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DAAB94801F22766A000164CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAAB94821F22766A000164CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DC288E4944A60CCB9B8677D /* Pods-PagingButtonDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SV98J7C3Y8;
+				INFOPLIST_FILE = PagingButtonDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yfming93.PagingButtonDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DAAB94831F22766A000164CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DCBBAC7D89B85DAF0E8969D /* Pods-PagingButtonDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SV98J7C3Y8;
+				INFOPLIST_FILE = PagingButtonDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yfming93.PagingButtonDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DAAB94851F22766A000164CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = SV98J7C3Y8;
+				INFOPLIST_FILE = PagingButtonDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yfming93.PagingButtonDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PagingButtonDemo.app/PagingButtonDemo";
+			};
+			name = Debug;
+		};
+		DAAB94861F22766A000164CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = SV98J7C3Y8;
+				INFOPLIST_FILE = PagingButtonDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yfming93.PagingButtonDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PagingButtonDemo.app/PagingButtonDemo";
+			};
+			name = Release;
+		};
+		DAAB94881F22766A000164CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = SV98J7C3Y8;
+				INFOPLIST_FILE = PagingButtonDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yfming93.PagingButtonDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PagingButtonDemo;
+			};
+			name = Debug;
+		};
+		DAAB94891F22766A000164CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = SV98J7C3Y8;
+				INFOPLIST_FILE = PagingButtonDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yfming93.PagingButtonDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PagingButtonDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAAB944F1F227669000164CF /* Build configuration list for PBXProject "PagingButtonDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAAB947F1F22766A000164CF /* Debug */,
+				DAAB94801F22766A000164CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAAB94811F22766A000164CF /* Build configuration list for PBXNativeTarget "PagingButtonDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAAB94821F22766A000164CF /* Debug */,
+				DAAB94831F22766A000164CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DAAB94841F22766A000164CF /* Build configuration list for PBXNativeTarget "PagingButtonDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAAB94851F22766A000164CF /* Debug */,
+				DAAB94861F22766A000164CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DAAB94871F22766A000164CF /* Build configuration list for PBXNativeTarget "PagingButtonDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAAB94881F22766A000164CF /* Debug */,
+				DAAB94891F22766A000164CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DAAB944C1F227669000164CF /* Project object */;
+}
