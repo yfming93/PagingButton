@@ -7,6 +7,7 @@
 //
 //  联系邮箱： yfmingo@163.com
 //  个人主页： https://www.yfmingo.cn
+//  项目地址： https://github.com/yfming93/PagingButton
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
