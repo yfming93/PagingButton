@@ -37,17 +37,17 @@ const
 
 
 - (void)yfm_setWithImageName:(NSString *)iconImageName WithTitle:(NSString *)title withTextColor:(UIColor *)textColor {
-
+    
     UIImageView *iconImageview = [[UIImageView alloc]initWithFrame:CGRectMake(IMAGE_TO_BUTTON_TOP, IMAGE_TO_BUTTON_TOP/2, (self.actionButtonViewWidth - IMAGE_TO_BUTTON_TOP * 2), (self.actionButtonViewWidth - IMAGE_TO_BUTTON_TOP * 2))];
     
     UIImage *placeholderIma ;
     if (self.actionButtonPlaceholderName.length){
-    
+        
         placeholderIma = [UIImage imageNamed:self.actionButtonPlaceholderName];
     }else {
         placeholderIma = [UIImage imageNamed:[@"PagingButtonView.bundle" stringByAppendingPathComponent:@"placeholder-button-ima.png"]];
     }
-
+    
     if ([iconImageName hasPrefix:@"http"]) {
         [iconImageview sd_setImageWithURL:[NSURL URLWithString:iconImageName] placeholderImage:placeholderIma];
     }else
@@ -60,13 +60,13 @@ const
     label.textAlignment = NSTextAlignmentCenter;
     label.font = [UIFont systemFontOfSize:12];
     if (self.pagingColumn > 6 ) {
-    
+        
         label.font = [UIFont systemFontOfSize:8];
     }else if (self.pagingColumn > 4 ) {
-    
+        
         label.font = [UIFont systemFontOfSize:10];
     }
-
+    
     label.textColor = textColor;
     [self addSubview:label];
 }
@@ -117,14 +117,14 @@ const
     if (_mainTitleLab.text.length) {
         //标题
         [_mainTitleLab setFrame:CGRectMake(self.mainTitleLab.frame.origin.x, self.mainTitleLab.frame.origin.y, ((frame.size.width > self.mainTitleLab.frame.size.width) && self.mainTitleLab.frame.size.width != 0 ) ? self.mainTitleLab.frame.size.width : frame.size.width,
-            self.mainTitleLab.frame.size.height ? self.mainTitleLab.frame.size.height : 30)];
+                                           self.mainTitleLab.frame.size.height ? self.mainTitleLab.frame.size.height : 30)];
         [self addSubview:_mainTitleLab];
-
+        
     }
     
     if (!self.pagingRow)  self.pagingRow = 2 ; //默认设置 2 行
     if (!self.pagingColumn) self.pagingColumn = 4 ; //默认设置 4 列
-
+    
     NSInteger count = bttTitleArr.count ,page = 0, pageControl_H = IMAGE_TO_BUTTON_TOP/2;
     /** pageControl_H是 _pageControl 的高度 */
     
@@ -138,7 +138,7 @@ const
     }
     
     switch (self.pageControlStyle) {
-        case PageControlStyleHiden:
+            case PageControlStyleHiden:
             pageControl_H = 5;
             break;
         default:
@@ -170,9 +170,9 @@ const
     bgScrollerView.contentSize = CGSizeMake(self.frame.size.width * page, bgScrollerView.frame.size.height);
     self.bgScrollerView = bgScrollerView;
     [self addSubview:_bgScrollerView];
-  
+    
     if ((self.pagingColumn * self.pagingRow ) < count) {
-         [self addPageControl:page pageControlStyle:self.pageControlStyle];
+        [self addPageControl:page pageControlStyle:self.pageControlStyle];
     }
     
     NSArray *tempTextColorArr;
@@ -200,7 +200,7 @@ const
                 buttonView.actionButtonViewWidth = self.buttonViewsWidth;
                 buttonView.pagingColumn = self.pagingColumn;
                 if (self.pagingButtonPlaceholderName.length) buttonView.actionButtonPlaceholderName = self.pagingButtonPlaceholderName;
-
+                
                 
                 [buttonView setFrame:CGRectMake(but_X,but_Y, _buttonViewsWidth, BUTTON_H)];
                 [buttonView yfm_setWithImageName: (i < iconUrlsOrNames.count ? iconUrlsOrNames[i] : nil) WithTitle:bttTitleArr[i]  withTextColor:textColor ];
@@ -209,7 +209,7 @@ const
                 buttonView.tag = i;
                 
                 [multView addSubview:buttonView];
-
+                
             }
         }
     }
@@ -219,20 +219,20 @@ const
 }
 
 - (void)addPageControl:(NSInteger)page pageControlStyle:(PageControlStyle)pageControlStyle {
-
+    
     if (pageControlStyle != PageControlStyleHiden) {
         _pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(0, self.frame.size.height - 18, self.frame.size.width, 20)];
         _pageControl.currentPage = 0;
         _pageControl.numberOfPages = page;
         [self addSubview:_pageControl];
     }
-
+    
     if (pageControlStyle  == PageControlStyleLongImage ) {
         [_pageControl setValue:[self yfm_imageWithColor:self.pageControlCurrentPageColor ? self.pageControlCurrentPageColor : [UIColor darkGrayColor]] forKeyPath:@"_currentPageImage"];
         [_pageControl setValue:[self yfm_imageWithColor:self.pageControlOtherPageColor ? self.pageControlOtherPageColor : [UIColor lightGrayColor]] forKeyPath:@"_pageImage"];
-
+        
     }else if ((pageControlStyle == PageControlStyleGrayDot) | !pageControlStyle) {
-    
+        
         _pageControl.currentPageIndicatorTintColor = self.pageControlCurrentPageColor ? self.pageControlCurrentPageColor : [UIColor darkGrayColor];
         _pageControl.pageIndicatorTintColor = self.pageControlOtherPageColor ? self.pageControlOtherPageColor : [UIColor lightGrayColor];
     }
@@ -249,7 +249,7 @@ const
 /** 行数 【若 行数过大导致空白多行则会自动重算行数】*/
 -(void)setPagingRow:(NSInteger)pagingRow {
     if (pagingRow < 1) pagingRow = 1;
-
+    
     _pagingRow = pagingRow;
 }
 
@@ -257,11 +257,11 @@ const
 -(void)setPagingColumn:(NSInteger)pagingColumn {
     
     if (pagingColumn > 8)
-        pagingColumn = 8;
+    pagingColumn = 8;
     else if (pagingColumn < 1)
-        pagingColumn = 4;
+    pagingColumn = 4;
     
-
+    
     _pagingColumn = pagingColumn;
 }
 

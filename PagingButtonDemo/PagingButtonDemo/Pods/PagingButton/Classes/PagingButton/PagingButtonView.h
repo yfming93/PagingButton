@@ -57,7 +57,7 @@ typedef NS_ENUM(NSInteger, PageControlStyle) {
 
 /**
  创建 PagingButtonView 【请在设置好相关属性后 最后一步调用此方法】
-
+ 
  @param frame 传入的frame 【注意 ：传入的 height 是无效的。 视图高度为动态生成】
  @param superView 显示在父视图上
  @param delegate 代理
