@@ -96,9 +96,7 @@ const
     NSInteger count = bttTitleArr.count ,page = 0, pageControl_H = IMAGE_TO_BUTTON_TOP;
     /** pageControl_H是 _pageControl 的高度 */
     page = count / (_pagingRow * _pagingColumn); //分页个数
-    if ( count % _pagingRow * _pagingColumn != 0) {
-        page = page + 1;
-    }
+    if ( count % (_pagingRow * _pagingColumn) != 0)  page += 1;
     
     switch (self.pageControlStyle) {
         case PageControlStyleHiden:
@@ -137,7 +135,7 @@ const
         for (NSInteger i = p * _pagingRow * _pagingColumn ; i < bttTitleArr.count; i ++) {
             if (i < (p+1) * _pagingRow * _pagingColumn) {
                 NSInteger column = ( i % ( _pagingRow * _pagingColumn )) % _pagingColumn;
-                NSInteger rowNum = ( i % (_pagingRow * _pagingColumn)) / _pagingColumn;
+                NSInteger rowNum = ( i % ( _pagingRow * _pagingColumn )) / _pagingColumn;
                 
                 
                 
