@@ -38,13 +38,22 @@ typedef NS_ENUM(NSInteger, PageControlStyle) {
 
 @property (nonatomic, assign) id <PagingButtonViewDelegate> delegate;
 
-@property (nonatomic, assign) PageControlStyle pageControlStyle; //pageControlStyle样式
-@property (nonatomic, strong) UIColor   *pageControlCurrentPageColor; //当前page颜色
-@property (nonatomic, strong) UIColor   *pageControlOtherPageColor;  //其他page颜色
-@property (nonatomic, assign) NSInteger pagingRow; //行数
-@property (nonatomic, assign) NSInteger pagingColumn; //列数
-@property (nonatomic, strong) UILabel   *mainTitleLab; //标题 【不赋值默认无标题】
-@property (nonatomic, assign) BOOL      hasClickAnimation; //是否有点击动画【默认开启】
+/** 按钮图标若为URL时的占位图。默认不传就用本项目自带占位图 */
+@property (nonatomic, strong) NSString *pagingButtonPlaceholderName;
+/** pageControlStyle样式 */
+@property (nonatomic, assign) PageControlStyle pageControlStyle;
+/** 当前page颜色 */
+@property (nonatomic, strong) UIColor   *pageControlCurrentPageColor;
+/** 其他page颜色 */
+@property (nonatomic, strong) UIColor   *pageControlOtherPageColor;
+/** 行数 【若 行数过大导致空白多行则会自动重算行数】*/
+@property (nonatomic, assign) NSInteger pagingRow;
+/** 列数 【最大 8列，不然文字显示不全哈。】 */
+@property (nonatomic, assign) NSInteger pagingColumn;
+/** 标题 【不赋值默认无标题】 */
+@property (nonatomic, strong) UILabel   *mainTitleLab;
+/** 是否有点击动画【默认开启】 */
+@property (nonatomic, assign) BOOL      hasClickAnimation;
 
 /**
  创建 PagingButtonView 【请在设置好相关属性后 最后一步调用此方法】

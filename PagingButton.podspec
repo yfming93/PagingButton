@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "PagingButton"
-  s.version      = "0.1.6"
+  s.version      = "0.1.7"
   s.summary      = "这是一个左右分页按钮的集合视图控件。用于快速编写集合视图上横向分页式多按钮点击事件！"
 
   # This description is used to generate tags and improve search results.

@@ -5,7 +5,9 @@
 //  Created by Mingo on 2017/7/22.
 //  Copyright © 2017年 袁凤鸣. All rights reserved.
 //
-
+//  联系邮箱： yfmingo@163.com
+//  个人主页： https://www.yfmingo.cn
+//  项目地址： https://github.com/yfming93/PagingButton
 
 #import "ViewController.h"
 #import <PagingButtonView.h>
@@ -49,6 +51,9 @@
 //        按钮点击动画效果 【默认带有点击效果】
 //        _demo01.hasClickAnimation = NO;
 
+//      按钮图标若为URL时的占位图。默认不传就用本项目自带占位图
+//      _demo01.pagingButtonPlaceholderName = @"占位图名称";
+
     UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 30)];
     title.textColor = [UIColor redColor];
     title.backgroundColor = [UIColor lightGrayColor];
@@ -70,7 +75,6 @@
 - (void)PagingButtonDemo02 {
 
     self.demo02 = [[PagingButtonView alloc] init];
-    
     [_demo02 yfm_createPagingButtonViewWithFrame:CGRectMake(0, 350, [UIScreen mainScreen].bounds.size.width, 0) showToSuperView:self.view delegate:self iconUrlsOrNamesArr:@[@"yfzwxx",@"yfzsbs",@"yfqtms",@"yfxwzx",@"yfmsfq",@"yfczms",@"yfwzms",@"yfzzms",@"yf-homexzms",@"yf-homejctj",@"yf-homewifi",@"yf-hometqcx",@"yf-homekqcx",@"yf-homekdcx",@"yf-homeswcx",@"yf-homeswcx",@"yf-homeswcx"] buttonTextColorArrOrOneColor:[UIColor blueColor] buttonTitleArray:@[@"政务信息",@"掌上办事",@"倾听民声",@"新闻资讯",@"民俗风情",@"吃在天朝",@"玩在天朝",@"住在天朝",@"行在天朝",@"精彩图集",@"免费WIFI",@"天气查询",@"空气查询",@"快递查询",@"税务查询",@"违章查询",@"水费查询"]];
 }
 
