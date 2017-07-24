@@ -5,7 +5,7 @@
 
 效果图：<br>
 
-![](https://ws1.sinaimg.cn/mw690/cb81ffe8gy1fht8em8hldg20ag0lbdqf.gif)
+![](https://ws1.sinaimg.cn/mw690/cb81ffe8gy1fhuqt2bamlg20aa0igtjf.gif)
 
 ## 二、 使用：
 
