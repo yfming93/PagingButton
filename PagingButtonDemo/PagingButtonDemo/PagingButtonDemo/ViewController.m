@@ -46,7 +46,7 @@
         _demo01.pageControlStyle = PageControlStyleLongImage;
 
         _demo01.pagingRow = 3; //设置行，不设置默认2行
-        _demo01.pagingColumn = 5; //设置列 不设置默认4列
+        _demo01.pagingColumn = 5; //设置列 【不设置 默认4列 最大8列，超过8列的都是流氓】
     
 //        按钮点击动画效果 【默认带有点击效果】
 //        _demo01.hasClickAnimation = NO;
