@@ -1,16 +1,16 @@
 PODS:
-  - PagingButton (0.1.7):
+  - PagingButton (0.2.0):
     - SDWebImage
-  - SDWebImage (4.0.0):
-    - SDWebImage/Core (= 4.0.0)
-  - SDWebImage/Core (4.0.0)
+  - SDWebImage (4.1.0):
+    - SDWebImage/Core (= 4.1.0)
+  - SDWebImage/Core (4.1.0)
 
 DEPENDENCIES:
   - PagingButton
 
 SPEC CHECKSUMS:
-  PagingButton: 8fcdf8e811bd7c894e2aaaa7f13dea08f4d3bf1d
-  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  PagingButton: f66d0b6262becd7d7c9941e596b5f1faf41a3561
+  SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
 
 PODFILE CHECKSUM: a2f8f964204bcf95fadab98e18aff1097813f375
 

@@ -54,7 +54,7 @@ const
     if ([iconImageName hasPrefix:@"http"]) {
         [iconImageview sd_setImageWithURL:[NSURL URLWithString:iconImageName] placeholderImage:placeholderIma];
     }else
-    iconImageview.image = [UIImage imageNamed:iconImageName];
+        iconImageview.image = [UIImage imageNamed:iconImageName];
     
     [self addSubview:iconImageview];
     
@@ -133,7 +133,7 @@ const
     }
     
     switch (self.pageControlStyle) {
-            case PageControlStyleHiden:
+        case PageControlStyleHiden:
             pageControl_H = kFit(5.0f);
             break;
         default:
@@ -164,7 +164,7 @@ const
         //按照frame高度来重新计算出 ALL_H
         self.pageButtonIconSize  = CGSizeMake((frame.size.height - ROW_SPACING * (_pagingRow - 1)) /_pagingRow, (frame.size.height - ROW_SPACING) /_pagingRow);
         ALL_H =  BUTTON_H *_pagingRow + ROW_SPACING * (_pagingRow - 1) + pageControl_H + _mainTitleLab.frame.size.height + _mainTitleLab.frame.origin.y;
-
+        
     }else {
         ALL_H = frame.size.height;
         BUTTON_H = icon_MAXH + ICON_TITLE_SPACING + TITLE_HEIGHT; //重置按钮高度
@@ -208,11 +208,11 @@ const
                 buttonView.actionButtonViewWidth = self.buttonViewsWidth;
                 buttonView.pagingColumn = self.pagingColumn;
                 
-                if (self.pageButtonTitleFontSize) 
+                if (self.pageButtonTitleFontSize)
                     buttonView.actionButtonfontSize = _pageButtonTitleFontSize;
                 
                 if (self.pagingButtonPlaceholderName.length) buttonView.actionButtonPlaceholderName = self.pagingButtonPlaceholderName;
-
+                
                 buttonView.actionButtonIconSize = _pageButtonIconSize;
                 [buttonView setFrame:CGRectMake(but_X,but_Y, _buttonViewsWidth, BUTTON_H)];
                 [buttonView yfm_setWithImageName: (i < iconUrlsOrNames.count ? iconUrlsOrNames[i] : nil) WithTitle:bttTitleArr[i]  withTextColor:textColor ];
@@ -258,7 +258,7 @@ const
 
 /** 按钮的图标大小（建议宽高相等）。【若设置过大则程序会根据主View的高度推算出一个最大值的图标宽高】 */
 -(void)setPageButtonIconSize:(CGSize)pageButtonIconSize {
-
+    
     _pageButtonIconSize = pageButtonIconSize;
 }
 
@@ -273,9 +273,9 @@ const
 -(void)setPagingColumn:(NSInteger)pagingColumn {
     
     if (pagingColumn > 8)
-    pagingColumn = 8;
+        pagingColumn = 8;
     else if (pagingColumn < 1)
-    pagingColumn = 4;
+        pagingColumn = 4;
     
     
     _pagingColumn = pagingColumn;
