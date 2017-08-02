@@ -12,13 +12,14 @@
 
 #import "PagingButtonView.h"
 #import "UIImageView+WebCache.h"
+//mainScreen
+#define kScreenW    [UIScreen mainScreen].bounds.size.width       //屏幕宽度
+#define kScreenH    [UIScreen mainScreen].bounds.size.height      //屏幕高度
+#define kFit(x)       (kScreenW*((x)/375.0))
 
-#define ROW_SPACING 5           //行间距
-#define ICON_TITLE_SPACING 5.0  //图标和字的间距
-#define TITLE_HEIGHT 15         //按钮上文字的高度
-#define IMAGE_TO_BUTTON_TOP 10.0   //按钮图标到按钮顶部的距离
-//按钮视图整个高度
-#define BUTTON_H IMAGE_TO_BUTTON_TOP/2 + (self.buttonViewsWidth - IMAGE_TO_BUTTON_TOP * 2) + ICON_TITLE_SPACING + TITLE_HEIGHT
+#define ROW_SPACING  kFit(5.0)          //行间距
+#define ICON_TITLE_SPACING kFit(5.0)  //图标和字的间距
+#define TITLE_HEIGHT kFit(15.0)         //按钮上文字的高度
 
 const
 
@@ -27,6 +28,8 @@ const
 @property (nonatomic, assign) CGFloat   actionButtonViewWidth; //实际按钮宽度
 @property (nonatomic, strong) NSString  *actionButtonPlaceholderName; //按钮图标若为URL时的占位图
 @property (nonatomic, assign) NSInteger pagingColumn; //列数
+@property (nonatomic, assign) CGSize actionButtonIconSize; //实际按钮图标大小
+@property (nonatomic, assign) CGFloat actionButtonfontSize;
 
 - (void)yfm_setWithFrame:(CGRect)frame WithImageName:(NSString *)iconImageName WithTitle:(NSString *)title withTextColor:(UIColor *)textColor;
 
@@ -35,10 +38,10 @@ const
 
 @implementation ActionButtonView
 
-
 - (void)yfm_setWithImageName:(NSString *)iconImageName WithTitle:(NSString *)title withTextColor:(UIColor *)textColor {
     
-    UIImageView *iconImageview = [[UIImageView alloc]initWithFrame:CGRectMake(IMAGE_TO_BUTTON_TOP, IMAGE_TO_BUTTON_TOP/2, (self.actionButtonViewWidth - IMAGE_TO_BUTTON_TOP * 2), (self.actionButtonViewWidth - IMAGE_TO_BUTTON_TOP * 2))];
+    CGFloat padding = (self.frame.size.height - TITLE_HEIGHT -_actionButtonIconSize.height)/4;
+    UIImageView *iconImageview = [[UIImageView alloc]initWithFrame:CGRectMake((_actionButtonViewWidth - _actionButtonIconSize.width)/2, padding, _actionButtonIconSize.width, _actionButtonIconSize.height)];
     
     UIImage *placeholderIma ;
     if (self.actionButtonPlaceholderName.length){
@@ -55,17 +58,11 @@ const
     
     [self addSubview:iconImageview];
     
-    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(iconImageview.frame) + ICON_TITLE_SPACING, self.frame.size.width, TITLE_HEIGHT)];
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, self.frame.size.height - TITLE_HEIGHT - padding  , self.frame.size.width, TITLE_HEIGHT)];
     label.text = title;
     label.textAlignment = NSTextAlignmentCenter;
-    label.font = [UIFont systemFontOfSize:12];
-    if (self.pagingColumn > 6 ) {
-        
-        label.font = [UIFont systemFontOfSize:8];
-    }else if (self.pagingColumn > 4 ) {
-        
-        label.font = [UIFont systemFontOfSize:10];
-    }
+    if (!self.actionButtonfontSize)  self.actionButtonfontSize = 12.0f;
+    label.font = [UIFont systemFontOfSize:self.actionButtonfontSize];
     
     label.textColor = textColor;
     [self addSubview:label];
@@ -78,10 +75,9 @@ const
 
 @property (nonatomic, strong) UIScrollView *bgScrollerView; //背景ScrollerView
 @property (nonatomic, strong) UIPageControl *pageControl; //分页标识
-@property (nonatomic, assign) CGFloat buttonViewsWidth; //按钮的宽度 默认60 。若溢出自动从设【同时 传值给 actionButtonViewWidth 用作实际按钮宽度】
+@property (nonatomic, assign) CGFloat buttonViewsWidth; //按钮的宽度 （屏幕宽度除以列数）
 
 @end
-
 
 @implementation PagingButtonView
 
@@ -95,7 +91,6 @@ const
         self.mainTitleLab.textAlignment = NSTextAlignmentCenter;
         self.pagingRow = 2;
         self.pagingColumn = 4;
-        self.buttonViewsWidth = 60.0;
     }
     return self;
 }
@@ -125,7 +120,7 @@ const
     if (!self.pagingRow)  self.pagingRow = 2 ; //默认设置 2 行
     if (!self.pagingColumn) self.pagingColumn = 4 ; //默认设置 4 列
     
-    NSInteger count = bttTitleArr.count ,page = 0, pageControl_H = IMAGE_TO_BUTTON_TOP/2;
+    NSInteger count = bttTitleArr.count ,page = 0, pageControl_H = kFit(5.0f) ;
     /** pageControl_H是 _pageControl 的高度 */
     
     while ((_pagingRow * _pagingColumn - count) >= _pagingColumn) {
@@ -139,27 +134,42 @@ const
     
     switch (self.pageControlStyle) {
             case PageControlStyleHiden:
-            pageControl_H = 5;
+            pageControl_H = kFit(5.0f);
             break;
         default:
-            pageControl_H = 20;
+            pageControl_H = kFit(20);
             if ((self.pagingColumn * self.pagingRow ) >= count) {
-                pageControl_H = 15;
+                pageControl_H = kFit(5.0f);
             }
             break;
     }
     
-    float horizontalSpacing = 0; //每列按钮的间隙
+    self.buttonViewsWidth = frame.size.width / self.pagingColumn;
     
-    if (frame.size.width >= (self.buttonViewsWidth * self.pagingColumn)) {
-        horizontalSpacing = (frame.size.width - self.buttonViewsWidth * _pagingColumn) / (_pagingColumn + 1);
-    }else {
-        
-        horizontalSpacing = 3.0f;
-        self.buttonViewsWidth = (frame.size.width - horizontalSpacing * (_pagingColumn + 1)) / _pagingColumn;
+    if (self.pageButtonIconSize.width > self.buttonViewsWidth) {
+        self.pageButtonIconSize  = CGSizeMake(_buttonViewsWidth, _buttonViewsWidth);
+    }else if (self.pageButtonIconSize.width <= 0.0) {
+        self.pageButtonIconSize = CGSizeMake(kFit(40.0f), kFit(40.0f));
     }
     
-    CGFloat ALL_H =  ( BUTTON_H + ROW_SPACING ) * _pagingRow + pageControl_H + _mainTitleLab.frame.size.height + _mainTitleLab.frame.origin.y;
+    CGFloat icon_MAXH = (frame.size.height - pageControl_H -_mainTitleLab.frame.size.height - _mainTitleLab.frame.origin.y  -ROW_SPACING *(_pagingRow - 1)) /_pagingRow - ICON_TITLE_SPACING -TITLE_HEIGHT;
+    if (self.pageButtonIconSize.height > icon_MAXH) {
+        self.pageButtonIconSize  = CGSizeMake(icon_MAXH, icon_MAXH  );
+    }
+    
+    CGFloat BUTTON_H = self.pageButtonIconSize.height + ICON_TITLE_SPACING + TITLE_HEIGHT;
+    
+    CGFloat ALL_H =  BUTTON_H *_pagingRow + ROW_SPACING * (_pagingRow - 1) + pageControl_H + _mainTitleLab.frame.size.height + _mainTitleLab.frame.origin.y;
+    if ( ALL_H > frame.size.height ) {
+        //按照frame高度来重新计算出 ALL_H
+        self.pageButtonIconSize  = CGSizeMake((frame.size.height - ROW_SPACING * (_pagingRow - 1)) /_pagingRow, (frame.size.height - ROW_SPACING) /_pagingRow);
+        ALL_H =  BUTTON_H *_pagingRow + ROW_SPACING * (_pagingRow - 1) + pageControl_H + _mainTitleLab.frame.size.height + _mainTitleLab.frame.origin.y;
+
+    }else {
+        ALL_H = frame.size.height;
+        BUTTON_H = icon_MAXH + ICON_TITLE_SPACING + TITLE_HEIGHT; //重置按钮高度
+    }
+    
     self.frame = CGRectMake(frame.origin.x , frame.origin.y, frame.size.width, ALL_H);
     UIScrollView *bgScrollerView = [[UIScrollView alloc]initWithFrame:CGRectMake(0,_mainTitleLab.frame.size.height + _mainTitleLab.frame.origin.y, self.frame.size.width, self.frame.size.height - _mainTitleLab.frame.size.height)];
     bgScrollerView.backgroundColor = self.backgroundColor;
@@ -189,19 +199,21 @@ const
                 NSInteger column = ( i % ( _pagingRow * _pagingColumn )) % _pagingColumn;
                 NSInteger rowNum = ( i % (_pagingRow * _pagingColumn)) / _pagingColumn;
                 
-                
-                
                 //创建各个button
-                CGFloat but_X = horizontalSpacing + (horizontalSpacing + _buttonViewsWidth) * column;
+                CGFloat but_X = _buttonViewsWidth * column;
                 CGFloat but_Y = ROW_SPACING + (ROW_SPACING + BUTTON_H) * rowNum;
                 id textColor = [textColorArrOrOne isKindOfClass:[UIColor class]] ? textColorArrOrOne:(i < tempTextColorArr.count ? tempTextColorArr[i] : [UIColor blackColor]);
                 
                 ActionButtonView *buttonView = [[ActionButtonView alloc]init];
                 buttonView.actionButtonViewWidth = self.buttonViewsWidth;
                 buttonView.pagingColumn = self.pagingColumn;
+                
+                if (self.pageButtonTitleFontSize) 
+                    buttonView.actionButtonfontSize = _pageButtonTitleFontSize;
+                
                 if (self.pagingButtonPlaceholderName.length) buttonView.actionButtonPlaceholderName = self.pagingButtonPlaceholderName;
-                
-                
+
+                buttonView.actionButtonIconSize = _pageButtonIconSize;
                 [buttonView setFrame:CGRectMake(but_X,but_Y, _buttonViewsWidth, BUTTON_H)];
                 [buttonView yfm_setWithImageName: (i < iconUrlsOrNames.count ? iconUrlsOrNames[i] : nil) WithTitle:bttTitleArr[i]  withTextColor:textColor ];
                 
@@ -209,11 +221,9 @@ const
                 buttonView.tag = i;
                 
                 [multView addSubview:buttonView];
-                
             }
         }
     }
-    
     [superView addSubview:self];
     return self.frame;
 }
@@ -221,7 +231,7 @@ const
 - (void)addPageControl:(NSInteger)page pageControlStyle:(PageControlStyle)pageControlStyle {
     
     if (pageControlStyle != PageControlStyleHiden) {
-        _pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(0, self.frame.size.height - 18, self.frame.size.width, 20)];
+        _pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(0, self.frame.size.height - kFit(18.0f), self.frame.size.width, kFit(20))];
         _pageControl.currentPage = 0;
         _pageControl.numberOfPages = page;
         [self addSubview:_pageControl];
@@ -244,6 +254,12 @@ const
 
 -(void)setPageControlOtherPageColor:(UIColor *)pageControlOtherPageColor {
     _pageControlOtherPageColor = pageControlOtherPageColor;
+}
+
+/** 按钮的图标大小（建议宽高相等）。【若设置过大则程序会根据主View的高度推算出一个最大值的图标宽高】 */
+-(void)setPageButtonIconSize:(CGSize)pageButtonIconSize {
+
+    _pageButtonIconSize = pageButtonIconSize;
 }
 
 /** 行数 【若 行数过大导致空白多行则会自动重算行数】*/
@@ -295,7 +311,7 @@ const
 
 #pragma mark - 颜色创建UIImage
 - (UIImage *)yfm_imageWithColor:(UIColor *)color {
-    CGRect rect = CGRectMake(0.0f, 0.0f, 30.0f, 3.0f);
+    CGRect rect = CGRectMake(0.0f, 0.0f, 20.0f, 3.0f);
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetFillColorWithColor(context, [color CGColor]);

@@ -15,6 +15,7 @@
 @class PagingButtonView;
 @protocol PagingButtonViewDelegate <NSObject>
 
+@optional
 /**
  PagingButtonView 协议方法
  @param actionView PagingButtonView
@@ -54,6 +55,10 @@ typedef NS_ENUM(NSInteger, PageControlStyle) {
 @property (nonatomic, strong) UILabel   *mainTitleLab;
 /** 是否有点击动画【默认开启】 */
 @property (nonatomic, assign) BOOL      hasClickAnimation;
+/** 按钮的图标大小（建议宽高相等）。【若设置过大则程序会根据主View的高度推算出一个最大值的图标宽高】 */
+@property (nonatomic, assign) CGSize pageButtonIconSize;
+/** 按钮的字号大小 【不设置默认12】 */
+@property (nonatomic, assign) CGFloat pageButtonTitleFontSize;
 
 /**
  创建 PagingButtonView 【请在设置好相关属性后 最后一步调用此方法】
