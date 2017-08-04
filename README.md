@@ -3,7 +3,8 @@
 ## 一、介绍：
 #### 这是一个左右分页按钮的集合视图控件。用于快速编写出集合视图上分页多按钮点击事件！
 
-原文在我博客： https://www.yfmingo.cn/2017/07/23/PagingButton/<br>
+原文在我博客： [https://www.yfmingo.cn/2017/07/23/PagingButton/](https://www.yfmingo.cn/2017/07/23/PagingButton/)
+<br>
 效果图：<br>
 
 ![](https://ws1.sinaimg.cn/mw690/cb81ffe8gy1fhuqt2bamlg20aa0igtjf.gif)
